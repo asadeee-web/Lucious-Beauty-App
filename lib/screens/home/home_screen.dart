@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/strings.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lucious_beauty/screens/booking/booking_screen.dart';
+import 'package:lucious_beauty/screens/cart/cart_screen.dart';
 import 'package:lucious_beauty/screens/custom_widgets/custom_booking.dart';
 import 'package:lucious_beauty/screens/custom_widgets/custom_featured_services.dart';
 import 'package:lucious_beauty/screens/custom_widgets/custom_our_services.dart';
@@ -41,7 +43,12 @@ class HomeScreen extends StatelessWidget {
                             "Rayna Carder",
                             style: headingTextStyle.copyWith(),
                           ),
-                          Image.asset("$iconsPath/cart_icon.png")
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => CartScreen()));
+                              },
+                              child: Image.asset("$iconsPath/cart_icon.png"))
                         ],
                       ),
                       SizedBox(
@@ -232,18 +239,12 @@ class HomeScreen extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => BookingScreen()));
-                                },
-                                child: Text(
-                                  "All Bookings",
-                                  style: subheadingTextStyle.copyWith(
-                                      color: greyColor,
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 12),
-                                ),
+                              Text(
+                                "All Bookings",
+                                style: subheadingTextStyle.copyWith(
+                                    color: greyColor,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 12),
                               ),
                               SizedBox(
                                 width: 5,
