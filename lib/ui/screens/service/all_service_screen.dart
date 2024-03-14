@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
-import 'package:lucious_beauty/screens/custom_widgets/custom_all_services.dart';
-import 'package:lucious_beauty/screens/custom_widgets/custom_back_button.dart';
-import 'package:lucious_beauty/screens/service/all_services_view_model.dart';
+import 'package:lucious_beauty/ui/custom_widgets/custom_all_services.dart';
+import 'package:lucious_beauty/ui/custom_widgets/custom_back_button.dart';
+import 'package:lucious_beauty/ui/screens/service/all_services_view_model.dart';
 import 'package:provider/provider.dart';
 
 class ServiceScreen extends StatelessWidget {

@@ -26,9 +26,9 @@
 import 'package:flutter/material.dart';
 import 'package:lucious_beauty/core/enums/view_state.dart';
 import 'package:lucious_beauty/core/others/base_view_model.dart';
-import 'package:lucious_beauty/screens/booking/booking_screen.dart';
-import 'package:lucious_beauty/screens/home/home_screen.dart';
-import 'package:lucious_beauty/screens/profile/profile_screen.dart';
+import 'package:lucious_beauty/ui/screens/booking/booking_screen.dart';
+import 'package:lucious_beauty/ui/screens/home/home_screen.dart';
+import 'package:lucious_beauty/ui/screens/profile/profile_screen.dart';
 
 class RootScreenViewModel extends BaseViewModel {
   RootScreenViewModel(val) {

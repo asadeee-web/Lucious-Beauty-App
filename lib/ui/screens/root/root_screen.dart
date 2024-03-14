@@ -73,8 +73,8 @@
 import 'package:flutter/material.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/strings.dart';
-import 'package:lucious_beauty/screens/custom_widgets/custom_bottom_navigationbar.dart';
-import 'package:lucious_beauty/screens/root/root_view_screen.dart';
+import 'package:lucious_beauty/ui/custom_widgets/custom_bottom_navigationbar.dart';
+import 'package:lucious_beauty/ui/screens/root/root_view_screen.dart';
 import 'package:provider/provider.dart';
 
 class RootScreen extends StatelessWidget {

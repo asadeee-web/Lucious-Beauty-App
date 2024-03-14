@@ -3,7 +3,7 @@ import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/strings.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
 
-import 'package:lucious_beauty/screens/auth/login/login_screen.dart';
+import 'package:lucious_beauty/ui/screens/auth/login/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

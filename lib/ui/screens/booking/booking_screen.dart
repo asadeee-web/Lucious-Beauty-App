@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
-import 'package:lucious_beauty/screens/booking/booking_view_model.dart';
-import 'package:lucious_beauty/screens/custom_widgets/custom_booking_navigation.dart';
+import 'package:lucious_beauty/ui/screens/booking/booking_view_model.dart';
+import 'package:lucious_beauty/ui/custom_widgets/custom_booking_navigation.dart';
 import 'package:provider/provider.dart';
 
 class BookingScreen extends StatelessWidget {

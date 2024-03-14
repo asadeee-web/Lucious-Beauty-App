@@ -2,18 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:lucious_beauty/core/constants/app_assets/app_assets.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
+import 'package:lucious_beauty/ui/screens/auth/login/login_screen.dart';
+import 'package:lucious_beauty/ui/custom_widgets/custom_button.dart';
+import 'package:lucious_beauty/ui/custom_widgets/custom_textfeild.dart';
+import 'package:lucious_beauty/ui/screens/home/home_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:lucious_beauty/screens/auth/sign_up/sign_up_screen.dart';
-import 'package:lucious_beauty/screens/custom_widgets/custom_bottom_navigationbar.dart';
-import 'package:lucious_beauty/screens/custom_widgets/custom_button.dart';
-import 'package:lucious_beauty/screens/custom_widgets/custom_textfeild.dart';
-import 'package:lucious_beauty/screens/home/home_screen.dart';
-import 'package:lucious_beauty/screens/root/root_screen.dart';
-//import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
+  @override
+  State<SignUpScreen> createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,13 +42,10 @@ class LoginScreen extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    "Login",
+                    "Register",
                     style: headingTextStyle,
                   )
                 ],
-              ),
-              SizedBox(
-                height: 20,
               ),
               CustomTextFeild(
                 hintText: "Email",
@@ -54,36 +53,33 @@ class LoginScreen extends StatelessWidget {
               CustomTextFeild(
                 hintText: "Password",
               ),
-              SizedBox(
-                height: 20,
+              CustomTextFeild(
+                hintText: "Confirm Password",
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => RootScreen()));
+                      MaterialPageRoute(builder: (context) => HomeScreen()));
                 },
                 child: CustomButton(
-                  text: "Login",
+                  text: "Register",
                 ),
-              ),
-              SizedBox(
-                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "New User ?",
+                    "Have Account?",
                     style: bodyTextStyle.copyWith(
                         fontSize: 20, fontWeight: FontWeight.w400),
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => SignUpScreen()));
+                          builder: (context) => LoginScreen()));
                     },
                     child: Text(
-                      "Register",
+                      "Login",
                       style: bodyTextStyle.copyWith(
                           fontSize: 20,
                           color: buttonColor,

@@ -51,6 +51,13 @@ class CustomBooking extends StatelessWidget {
                       color: greyColor,
                       fontSize: 12,
                       fontWeight: FontWeight.w400),
+                ),
+                Text(
+                  "${booking.time}",
+                  style: subheadingTextStyle.copyWith(
+                      color: greyColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400),
                 )
               ],
             ),

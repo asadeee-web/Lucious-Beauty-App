@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/strings.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
-import 'package:lucious_beauty/screens/auth/login/login_screen.dart';
-import 'package:lucious_beauty/screens/custom_widgets/custom_button.dart';
+import 'package:lucious_beauty/ui/screens/auth/login/login_screen.dart';
+import 'package:lucious_beauty/ui/custom_widgets/custom_button.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -92,83 +92,10 @@ class ProfileScreen extends StatelessWidget {
                   SizedBox(
                     height: 20.h,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "About Us",
-                        style: subheadingTextStyle.copyWith(
-                            fontWeight: FontWeight.w400, fontSize: 18),
-                      ),
-                      ImageIcon(
-                        AssetImage("$staticAssets/images/vector.png"),
-                        color: greyColor,
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    width: 320,
-                    child: Divider(
-                      thickness: 0.2,
-                      color: greyColor,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 2.h,
-                  ),
+                  profileDetail(title: 'About Us'),
+                  profileDetail(title: 'Career'),
+                  profileDetail(title: 'Pricing and Plannings'),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Career",
-                        style: subheadingTextStyle.copyWith(
-                            fontWeight: FontWeight.w400, fontSize: 18),
-                      ),
-                      ImageIcon(
-                        AssetImage(
-                          "$staticAssets/images/vector.png",
-                        ),
-                        color: greyColor,
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    width: 320,
-                    child: Divider(
-                      thickness: 0.2,
-                      color: greyColor,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 2.h,
-                  ),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Pricing and Plannings",
-                        style: subheadingTextStyle.copyWith(
-                            fontWeight: FontWeight.w400, fontSize: 18),
-                      ),
-                      ImageIcon(
-                        AssetImage("$staticAssets/images/vector.png"),
-                        color: greyColor,
-                      )
-                    ],
-                  ),
-
-                  const SizedBox(
-                    width: 320,
-                    child: Divider(
-                      thickness: 0.2,
-                      color: greyColor,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
                   TextButton(
                       onPressed: () {
                         Get.to(LoginScreen());
@@ -186,4 +113,37 @@ class ProfileScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+profileDetail({title, onPressed}) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 15.0),
+    child: GestureDetector(
+      onTap: onPressed,
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "$title",
+                style: subheadingTextStyle.copyWith(
+                    fontWeight: FontWeight.w400, fontSize: 18),
+              ),
+              ImageIcon(
+                AssetImage(
+                  "$staticAssets/images/vector.png",
+                ),
+                color: greyColor,
+              )
+            ],
+          ),
+          Divider(
+            thickness: 0.3,
+            color: greyColor,
+          ),
+        ],
+      ),
+    ),
+  );
 }
