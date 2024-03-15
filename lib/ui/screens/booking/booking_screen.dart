@@ -37,7 +37,7 @@ class BookingScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600, fontSize: 16),
                 ),
                 SizedBox(
-                  height: 240,
+                  height: 280,
                   child: ListView.separated(
                     itemCount: model.listbooking.length,
                     scrollDirection: Axis.vertical,
@@ -51,6 +51,9 @@ class BookingScreen extends StatelessWidget {
                       );
                     },
                   ),
+                ),
+                SizedBox(
+                  height: 10.h,
                 ),
                 Text(
                   "Previous Bookings",

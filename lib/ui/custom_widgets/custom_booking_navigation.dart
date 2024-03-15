@@ -20,7 +20,8 @@ class CustomBookingNavigation extends StatelessWidget {
               alignment: Alignment.topRight,
               child: Icon(
                 Icons.more_vert,
-                size: 14,
+                size: 16,
+                color: greyColor,
               )),
           Row(
             //mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,9 +63,11 @@ class CustomBookingNavigation extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: Text(
-              '${booking.time}',
+              '${booking.time2}',
               style: subheadingTextStyle.copyWith(
-                  color: greyColor, fontSize: 12, fontWeight: FontWeight.w400),
+                  color: buttonColor,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400),
             ),
           )
         ],
