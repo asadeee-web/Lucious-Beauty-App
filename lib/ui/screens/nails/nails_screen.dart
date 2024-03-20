@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
 import 'package:lucious_beauty/ui/screens/nails/nails_screen_view_model.dart';
 import 'package:provider/provider.dart';
@@ -13,14 +14,36 @@ class NailScreen extends StatelessWidget {
       create: (create) => NailsModel(),
       child: Consumer<NailsModel>(
           builder: (context, model, child) => Scaffold(
+                backgroundColor: primaryColor,
                 appBar: AppBar(
+                  backgroundColor: primaryColor,
                   title: Text(
                     "Nails",
                     style: headingTextStyle,
                   ),
                 ),
 
-                //body: ,
+                body:Column(
+                 children: [
+                  Expanded(child: GridView.builder
+                  
+                  
+                  (
+                    itemCount: model.listnailsmodel.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,), itemBuilder: (
+                    
+                    context,index){
+                      GestureDetector(
+                        onTap: (){
+                          
+                        },
+
+                        
+                        
+                        child: ,)
+                    }))
+                 ],
+                ) ,
               )),
     );
   }
