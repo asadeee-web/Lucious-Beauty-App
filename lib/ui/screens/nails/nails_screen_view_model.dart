@@ -7,6 +7,18 @@ class NailsModel extends BaseViewModel {
     nails(
         "$dynamicAssets/images/nails.png", "Classic Maincure", "45 min 59 AED"),
     nails(
-        "$dynamicAssets/images/feet.png", "Classic Predicure", "45 min 59 AED")
+        "$dynamicAssets/images/feet.png", "Classic Predicure", "45 min 59 AED"),
+    nails(
+        "$dynamicAssets/images/nails.png", "Classic Maincure", "45 min 59 AED"),
+    nails(
+        "$dynamicAssets/images/feet.png", "Classic Predicure", "45 min 59 AED"),
+    nails(
+        "$dynamicAssets/images/nails.png", "Classic Maincure", "45 min 59 AED"),
+    nails(
+        "$dynamicAssets/images/feet.png", "Classic Predicure", "45 min 59 AED"),
+    nails(
+        "$dynamicAssets/images/nails.png", "Classic Maincure", "45 min 59 AED"),
+    nails(
+        "$dynamicAssets/images/feet.png", "Classic Predicure", "45 min 59 AED"),
   ];
 }

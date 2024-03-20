@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
+import 'package:lucious_beauty/ui/custom_widgets/custom_specific_services.dart';
+import 'package:lucious_beauty/ui/screens/details_screens/details_screen.dart';
 import 'package:lucious_beauty/ui/screens/nails/nails_screen_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -18,32 +20,35 @@ class NailScreen extends StatelessWidget {
                 appBar: AppBar(
                   backgroundColor: primaryColor,
                   title: Text(
-                    "Nails",
+                    "$titlename",
                     style: headingTextStyle,
                   ),
                 ),
-
-                body:Column(
-                 children: [
-                  Expanded(child: GridView.builder
-                  
-                  
-                  (
-                    itemCount: model.listnailsmodel.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,), itemBuilder: (
-                    
-                    context,index){
-                      GestureDetector(
-                        onTap: (){
-                          
-                        },
-
-                        
-                        
-                        child: ,)
-                    }))
-                 ],
-                ) ,
+                body: Column(
+                  children: [
+                    Expanded(
+                        child: GridView.builder(
+                            padding: const EdgeInsets.all(20),
+                            itemCount: model.listnailsmodel.length,
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 15,
+                              crossAxisSpacing: 15,
+                            ),
+                            itemBuilder: (context, index) {
+                              return GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => DetailScreen()));
+                                },
+                                child: CustomSpecificServices(
+                                  nailsservices: model.listnailsmodel[index],
+                                ),
+                              );
+                            }))
+                  ],
+                ),
               )),
     );
   }
