@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
 import 'package:lucious_beauty/ui/custom_widgets/custom_all_services.dart';
+import 'package:lucious_beauty/ui/screens/nails/nails_screen.dart';
 
 import 'package:lucious_beauty/ui/screens/service/all_services_view_model.dart';
 import 'package:provider/provider.dart';
@@ -35,8 +36,16 @@ class ServiceScreen extends StatelessWidget {
                                     crossAxisCount: 2),
                             itemCount: model.listAllServices.length,
                             itemBuilder: (context, index) {
-                              return CustomAllServices(
-                                services: model.listAllServices[index],
+                              return GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => NailScreen(
+                                            titlename:
+                                                "${model.listAllServices[index].title}",
+                                          )));
+                                },
+                                child: CustomAllServices(
+                                    services: model.listAllServices[index]),
                               );
                             }),
                       ),
