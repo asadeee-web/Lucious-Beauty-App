@@ -3,12 +3,12 @@ import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
 import 'package:lucious_beauty/ui/custom_widgets/custom_specific_services.dart';
 import 'package:lucious_beauty/ui/screens/details_screens/details_screen.dart';
-import 'package:lucious_beauty/ui/screens/nails/nails_screen_view_model.dart';
+import 'package:lucious_beauty/ui/screens/specific_services/specific_screen_view_model.dart';
 import 'package:provider/provider.dart';
 
-class NailScreen extends StatelessWidget {
+class SpecificServiceScreen extends StatelessWidget {
   String? titlename;
-  NailScreen({this.titlename, super.key});
+  SpecificServiceScreen({this.titlename, super.key});
 
   @override
   Widget build(BuildContext context) {
