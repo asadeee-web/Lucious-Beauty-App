@@ -40,7 +40,9 @@ class SpecificServiceScreen extends StatelessWidget {
                               return GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => DetailScreen()));
+                                      builder: (context) => DetailScreen(
+                                          specificServices:
+                                              model.listnailsmodel[index])));
                                 },
                                 child: CustomSpecificServices(
                                   nailsservices: model.listnailsmodel[index],
