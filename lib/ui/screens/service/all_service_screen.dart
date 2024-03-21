@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
 import 'package:lucious_beauty/ui/custom_widgets/custom_all_services.dart';
+import 'package:lucious_beauty/ui/screens/root/root_screen.dart';
 import 'package:lucious_beauty/ui/screens/specific_services/specific_services_screen.dart';
 
 import 'package:lucious_beauty/ui/screens/service/all_services_view_model.dart';
@@ -23,6 +24,12 @@ class ServiceScreen extends StatelessWidget {
                       'All Services',
                       style: headingTextStyle,
                     ),
+                    leading: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => RootScreen()));
+                        },
+                        child: Icon(Icons.arrow_back)),
                   ),
                   body: Column(
                     children: [

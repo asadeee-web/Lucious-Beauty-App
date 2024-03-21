@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
 import 'package:lucious_beauty/core/constants/strings.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
+import 'package:lucious_beauty/core/model/all_services.dart';
 import 'package:lucious_beauty/core/model/nails_model.dart';
+import 'package:lucious_beauty/ui/screens/service/all_service_screen.dart';
 import 'package:lucious_beauty/ui/screens/specific_services/specific_services_screen.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -34,8 +36,8 @@ class DetailScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
             child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => SpecificServiceScreen()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ServiceScreen()));
                 },
                 child: Icon(
                   Icons.arrow_back_rounded,

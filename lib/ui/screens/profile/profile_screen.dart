@@ -26,88 +26,85 @@ class ProfileScreen extends StatelessWidget {
           automaticallyImplyLeading: false,
         ),
         backgroundColor: primaryColor,
-        body: SingleChildScrollView(
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-              child: Column(
-                //mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  ///
-                  ///profile image
-                  ///
-                  Center(
-                      child: CircleAvatar(
-                    radius: 85.r,
-                    backgroundImage:
-                        AssetImage("$staticAssets/images/women_profile.png"),
-                  )),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  Text(
-                    "Rayna Carder",
-                    style: headingTextStyle.copyWith(fontSize: 22),
-                  ),
-                  Text(
-                    "RaynaCarder@Email.com",
-                    style: subheadingTextStyle.copyWith(
-                        color: greyColor,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 18),
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  //
-                  // CustomButton(text: "Edit Profile"),
-                  Container(
-                    width: 133,
-                    height: 45,
-                    // padding: EdgeInsets.symmetric(horizontal: 5),
-                    child: Center(
-                        child: Text(
-                      "Edit Profile",
-                      style: subheadingTextStyle.copyWith(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: whiteColor),
-                    )),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: buttonColor),
-                  ),
-
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  const SizedBox(
-                    width: 320,
-                    child: Divider(
-                      thickness: 0.5,
-                      color: greyColor,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  profileDetail(title: 'About Us'),
-                  profileDetail(title: 'Career'),
-                  profileDetail(title: 'Pricing and Plannings'),
-
-                  TextButton(
-                      onPressed: () {
-                        Get.to(LoginScreen());
-                      },
-                      child: Text(
-                        "Logout",
-                        style: subheadingTextStyle.copyWith(
-                            color: buttonColor, fontSize: 18),
-                      ))
-                ],
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+          child: Column(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ///
+              ///profile image
+              ///
+              Center(
+                  child: CircleAvatar(
+                radius: 80.r,
+                backgroundImage: AssetImage(
+                  "$dynamicAssets/images/profile_2.png",
+                ),
+              )),
+              SizedBox(
+                height: 15.h,
               ),
-            ),
+              Text(
+                "Asad Qureshi",
+                style: headingTextStyle.copyWith(fontSize: 22),
+              ),
+              Text(
+                "asadeee998@gmail.com",
+                style: subheadingTextStyle.copyWith(
+                    color: greyColor,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 18),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              //
+              // CustomButton(text: "Edit Profile"),
+              Container(
+                width: 133,
+                height: 45,
+                // padding: EdgeInsets.symmetric(horizontal: 5),
+                child: Center(
+                    child: Text(
+                  "Edit Profile",
+                  style: subheadingTextStyle.copyWith(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: whiteColor),
+                )),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: buttonColor),
+              ),
+
+              SizedBox(
+                height: 10.h,
+              ),
+              const SizedBox(
+                width: 320,
+                child: Divider(
+                  thickness: 0.5,
+                  color: greyColor,
+                ),
+              ),
+              SizedBox(
+                height: 15.h,
+              ),
+              profileDetail(title: 'About Us'),
+              profileDetail(title: 'Career'),
+              profileDetail(title: 'Pricing and Plannings'),
+
+              TextButton(
+                  onPressed: () {
+                    Get.to(LoginScreen());
+                  },
+                  child: Text(
+                    "Logout",
+                    style: subheadingTextStyle.copyWith(
+                        color: buttonColor, fontSize: 18),
+                  ))
+            ],
           ),
         ),
       ),
@@ -117,7 +114,7 @@ class ProfileScreen extends StatelessWidget {
 
 profileDetail({title, onPressed}) {
   return Padding(
-    padding: const EdgeInsets.symmetric(vertical: 15.0),
+    padding: const EdgeInsets.symmetric(vertical: 8.0),
     child: GestureDetector(
       onTap: onPressed,
       child: Column(
