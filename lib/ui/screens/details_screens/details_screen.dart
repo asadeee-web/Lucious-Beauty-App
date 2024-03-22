@@ -6,6 +6,7 @@ import 'package:lucious_beauty/core/constants/strings.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
 import 'package:lucious_beauty/core/model/all_services.dart';
 import 'package:lucious_beauty/core/model/nails_model.dart';
+import 'package:lucious_beauty/ui/screens/home/home_booking.dart';
 import 'package:lucious_beauty/ui/screens/service/all_service_screen.dart';
 import 'package:lucious_beauty/ui/screens/specific_services/specific_services_screen.dart';
 
@@ -107,7 +108,49 @@ class DetailScreen extends StatelessWidget {
                     //       color: buttonColor,
                     //       fontWeight: FontWeight.w400),
                     // )
-                    Container()
+                    SizedBox(
+                      height: 60,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => HomeBooking()));
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 50, vertical: 18),
+                            child: Text(
+                              "Book Now",
+                              style: subheadingTextStyle.copyWith(
+                                  color: whiteColor,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                color: buttonColor),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 30, vertical: 18),
+                          child: Text(
+                            "Add To Cart",
+                            style: subheadingTextStyle.copyWith(
+                                color: buttonColor,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(width: 1, color: buttonColor),
+                          ),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
