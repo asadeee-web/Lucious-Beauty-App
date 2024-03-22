@@ -79,18 +79,9 @@ class ProfileScreen extends StatelessWidget {
               ),
 
               SizedBox(
-                height: 10.h,
+                height: 12.h,
               ),
-              const SizedBox(
-                width: 320,
-                child: Divider(
-                  thickness: 0.5,
-                  color: greyColor,
-                ),
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
+
               profileDetail(title: 'About Us'),
               profileDetail(title: 'Career'),
               profileDetail(title: 'Pricing and Plannings'),
@@ -136,7 +127,7 @@ profileDetail({title, onPressed}) {
             ],
           ),
           Divider(
-            thickness: 0.3,
+            thickness: 0.8,
             color: greyColor,
           ),
         ],
