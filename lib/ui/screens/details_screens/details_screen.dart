@@ -1,4 +1,4 @@
-// ignore_for_file: unused_field
+// ignore_for_file: unused_field, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:lucious_beauty/core/constants/colors.dart';
@@ -6,7 +6,7 @@ import 'package:lucious_beauty/core/constants/strings.dart';
 import 'package:lucious_beauty/core/constants/styles.dart';
 import 'package:lucious_beauty/core/model/all_services.dart';
 import 'package:lucious_beauty/core/model/nails_model.dart';
-import 'package:lucious_beauty/ui/screens/home/home_booking.dart';
+import 'package:lucious_beauty/ui/screens/home/home-booking/home_booking.dart';
 import 'package:lucious_beauty/ui/screens/service/all_service_screen.dart';
 import 'package:lucious_beauty/ui/screens/specific_services/specific_services_screen.dart';
 
